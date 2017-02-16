@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+
+      <p id="notice"><%= notice %></p>
+
+      <h1>
+        <%= @cocktail.name %>
+      </h1>
+
+      <p>
+        <strong>Ingredients:</strong>
+        <ul>
+          <% @cocktail.doses.each do |doses| %>
+          <li><%= doses.description %> of <%= doses.ingredient.name %></li>
+          <% end %>
+        </ul>
+      </p>
+
+      <%= link_to 'Add dose', new_cocktail_dose_path(@cocktail) %> |
+      <%= link_to 'Back', cocktails_path %>
+
+    </div>
+  </div>
+</div>
