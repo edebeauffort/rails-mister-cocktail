@@ -1,3 +1,101 @@
-.background {
-  background-color: #3079AB;
+.card {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+  margin: 15px 0px 15px 0px;
+  box-shadow: 0 0px 3px rgba(0,0,0,0.6);
+  border-radius: 5px;
+  text-decoration: none;
+
+
+}
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-decoration: none;
+}
+.card-category {
+  font-size: 30px;
+  font-family: 'Pangolin', cursive;
+}
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 30px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index:2;
+  background: black;
+  opacity: 0;
+}
+.card:hover{
+  opacity: 0.8;
+}
+
+.container {
+  width: 100vw;
+  list-style: unstyled;
+  text-align: center;
+}
+
+.container h1{
+  font-family: 'Monoton', cursive;
+}
+
+.btn-primary {
+  background-color: #FFB00E;
+  border-color: #BF772F;
+  margin: 30px;
+}
+
+.btn-primary:hover {
+  background-color: #E04137;
+  border-color: #B10712;
+}
+
+.ingredient {
+  color: black;
+  text-align: center;
+  width: 200px;
+}
+
+.new_ingredient {
+  color: white;
+}
+
+
+.wrapper .text {
+position:relative;
+visibility:hidden;
+}
+
+.wrapper:hover .text li {
+visibility:visible;
+font-size: 20px;
+color: #F4E95C;
+display: flex;
+text-align: center;
+margin: auto 0px;
+text-decoration: none;
+padding: 0px 20px;
+}
+
+
+a {
+text-decoration: none !important;
+color: white;
+}
+
+a:hover {
+  color: #B10712
 }

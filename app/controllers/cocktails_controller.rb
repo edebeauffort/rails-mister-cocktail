@@ -6,6 +6,10 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
+  def show
+    @dose = Dose.new
+  end
+
   def new
     @cocktail = Cocktail.new
   end
@@ -39,7 +43,7 @@ class CocktailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cocktail_params
-      params.require(:cocktail).permit(:name)
+      params.require(:cocktail).permit(:name, :photo, :photo_cache)
     end
 
   end

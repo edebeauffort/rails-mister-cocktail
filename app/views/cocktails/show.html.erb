@@ -2,24 +2,39 @@
   <div class="row">
     <div class="col-md-offset-3 col-md-6">
 
-      <p id="notice"><%= notice %></p>
-
       <h1>
         <%= @cocktail.name %>
       </h1>
 
       <p>
-        <strong>Ingredients:</strong>
-        <ul>
+        -------------------------------------
+        <table class="table table-striped ingredient">
+          <ul class= "list-unstyled">
           <% @cocktail.doses.each do |doses| %>
           <li><%= doses.description %> of <%= doses.ingredient.name %></li>
           <% end %>
-        </ul>
+          ----------------------------------------
+          </ul>
+
+        </table>
       </p>
 
-      <%= link_to 'Add dose', new_cocktail_dose_path(@cocktail) %> |
-      <%= link_to 'Back', cocktails_path %>
+      <div class = "new_ingredient">
+      <h3> Add an ingredient:</h2>
 
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+
+      <%= f.input :description %>
+      <%= f.association :ingredient, collection: Ingredient.all %>
+      <%= f.button :submit, class: "btn btn-primary"%>
+      <% end %>
+
+      <%= link_to 'Back', cocktails_path %> |
+      <%# link_to 'Destroy', cocktail_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to cocktail_path(@cocktail), method: :delete do %>
+      <i class="fa fa-trash"></i>
+      <%end %>
+      </div>
     </div>
   </div>
 </div>

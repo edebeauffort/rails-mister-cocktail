@@ -11,9 +11,10 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Pangolin" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-image: url(<%= image_path "background.jpg" %>) ;">
   <%= render "layouts/navbar"%>
   <%= yield %>
 </body>
