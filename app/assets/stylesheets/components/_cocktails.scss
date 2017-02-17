@@ -35,7 +35,7 @@
   right: 0;
   width: 100%;
   z-index:2;
-  background: black;
+  background: white;
   opacity: 0;
 }
 .card:hover{
@@ -65,7 +65,7 @@
 }
 
 .ingredient {
-  color: black;
+  color: white;
   text-align: center;
   width: 200px;
 }
@@ -95,6 +95,10 @@ padding: 0px 20px;
 a {
 text-decoration: none !important;
 color: white;
+}
+
+.new {
+  color: white;
 }
 
 a:hover {
